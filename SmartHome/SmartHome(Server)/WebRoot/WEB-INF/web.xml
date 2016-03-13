@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <!-- 全站参数配置开始 -->
+	<context-param>
+		<description>全站编码配置</description>
+	  	<param-name>encode</param-name>
+	  	<param-value>utf-8</param-value>
+	</context-param>
+  <!-- 全站参数配置结束 -->
+  <!-- 过滤器配置开始 -->
+  	<filter>
+		<description>全站乱码过滤器</description>
+		<filter-name>encodeFilter</filter-name>
+		<filter-class>com.young.filter.EncodeFilter</filter-class>
+		<init-param>
+			<param-name>encode</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<description>权限过滤器</description>
+		<filter-name>PrivilegeFilter</filter-name>
+		<filter-class>com.young.filter.PrivilegeFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>PrivilegeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+   <!-- 过滤器配置结束 -->
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.young.web.TestServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowHomeServlet</servlet-name>
+    <servlet-class>com.young.web.ShowHomeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.young.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ValiImg</servlet-name>
+    <servlet-class>com.young.web.ValiImg</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.young.web.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelRecServlet</servlet-name>
+    <servlet-class>com.young.web.DelRecServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RecListServlet</servlet-name>
+    <servlet-class>com.young.web.RecListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelServlet</servlet-name>
+    <servlet-class>com.young.web.BatchDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddRecServlet</servlet-name>
+    <servlet-class>com.young.web.AddRecServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindRecByDateServlet</servlet-name>
+    <servlet-class>com.young.web.FindRecByDateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoorGuardServlet</servlet-name>
+    <servlet-class>com.young.web.DoorGuardServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IgnoreServlet</servlet-name>
+    <servlet-class>com.young.web.IgnoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AgreeToOpenServlet</servlet-name>
+    <servlet-class>com.young.web.AgreeToOpenServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelDoorServlet</servlet-name>
+    <servlet-class>com.young.web.DelDoorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelDoorServlet</servlet-name>
+    <servlet-class>com.young.web.BatchDelDoorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindDoorByDateServlet</servlet-name>
+    <servlet-class>com.young.web.FindDoorByDateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddDataServlet</servlet-name>
+    <servlet-class>com.young.web.AddDataServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/servlet/TestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowHomeServlet</servlet-name>
+    <url-pattern>/servlet/ShowHomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValiImg</servlet-name>
+    <url-pattern>/servlet/ValiImg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelRecServlet</servlet-name>
+    <url-pattern>/servlet/DelRecServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RecListServlet</servlet-name>
+    <url-pattern>/servlet/RecListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelServlet</servlet-name>
+    <url-pattern>/servlet/BatchDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddRecServlet</servlet-name>
+    <url-pattern>/servlet/AddRecServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindRecByDateServlet</servlet-name>
+    <url-pattern>/servlet/FindRecByDateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoorGuardServlet</servlet-name>
+    <url-pattern>/servlet/DoorGuardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IgnoreServlet</servlet-name>
+    <url-pattern>/servlet/IgnoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AgreeToOpenServlet</servlet-name>
+    <url-pattern>/servlet/AgreeToOpenServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelDoorServlet</servlet-name>
+    <url-pattern>/servlet/DelDoorServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelDoorServlet</servlet-name>
+    <url-pattern>/servlet/BatchDelDoorServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindDoorByDateServlet</servlet-name>
+    <url-pattern>/servlet/FindDoorByDateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddDataServlet</servlet-name>
+    <url-pattern>/servlet/AddDataServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,43 @@
+package com.young.domain;
+
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class User implements Serializable {
+	private int id;
+	private String username;
+	private String password;
+	private String door_id;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getDoor_id() {
+		return door_id;
+	}
+
+	public void setDoor_id(String door_id) {
+		this.door_id = door_id;
+	}
+}

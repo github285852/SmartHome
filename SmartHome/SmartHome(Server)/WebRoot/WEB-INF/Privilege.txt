@@ -1,0 +1,6 @@
+/SmartHome/recordList.jsp
+/SmartHome/servlet/BatchDelServlet
+/SmartHome/servlet/DelRecServlet
+/SmartHome/servlet/FindRecByDateServlet
+/SmartHome/servlet/RecListServlet
+/SmartHome/servlet/ShowHomeServlet
